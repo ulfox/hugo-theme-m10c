@@ -39,9 +39,16 @@
     </header>
     <main class="app-container">
       {{ block "amain" . }}
-      <main class="main">
-        <div class="post-content">
+      <main class="about">
+        <div class="post-content">          
           {{ with .Site.GetPage "/about/info" }}{{ .Content }}{{ end }}
+        </div>
+        <div class="post-content">
+          Tags:
+          <a href="{{ "/tags/linux" | relLangURL }}">linux</a> 
+          {{ range $index, $element := .Site.Taxonomies.tags }}
+              {{if ne $index "linux" }} - <a href="{{ "/tags/" | relLangURL }}{{ $index | urlize }}">{{ $index }}</a>{{end}}
+          {{end}}
         </div>
       </main>
       {{ end }}

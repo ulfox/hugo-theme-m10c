@@ -1,0 +1,53 @@
+.about{
+  width: 80%;
+  .post-content{
+    width: 60%;
+  }
+}
+
+.about-header {
+  padding: 2.5em;
+  background: $darkest-color;
+  text-align: center;
+}
+
+.about-header {
+  padding: 2.5em;
+  background: $darkest-color;
+  text-align: center;
+}
+
+.about-header-avatar {
+  max-width: 15rem;
+  max-height: 15rem;
+  border-radius: 100%;
+  border: 0.5rem solid $primary-color;
+}
+
+.about-container {
+  padding: 2.5rem;
+}
+
+.about-header-social {
+  font-size: 2em;
+  color: $lightest-color;
+
+  a {
+    margin: 0 0.1em;
+  }
+}
+
+@media (min-width: 940px) {
+  .about-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 20rem;
+    min-height: 100vh;
+  }
+
+  .about-container {
+    max-width: 100%;
+    margin-left: 20rem;
+  }
+}
